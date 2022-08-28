@@ -9,8 +9,7 @@
     <header>
       <nav class="nav-bar">
         <div class="logo-container">
-        <p class="logo">Logo</p>
-          <!-- <img class="logo" src="poly-img.jpg" alt="FPI logo"> -->
+          <img class="logo" src="resource/Images/poly-logo.png" alt="FPI logo">
         </div>
         <ul class="main-nav">
             <li><a href="index.php">Login</a></li>
