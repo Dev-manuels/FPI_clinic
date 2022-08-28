@@ -20,7 +20,9 @@
       </nav>
       <div class="hero-content">
         <div>
-          <h2>Welcome to<br><span>The Medical Centre Federal Polytechnic Ilaro</span></h2>
+          <h2 class="hero-text">Welcome to</h2>
+          <h2 class="hero-text-main">The Medical Centre</h2>
+          <h2 class="hero-text-main">Federal Polytechnic Ilaro</h2>
         </div>
         <div></div>
 
