@@ -20,7 +20,7 @@ body, html {
 
 header {
     min-height: 100%;
-    background-color: #4169e1;
+    background-color: rgb(206, 206, 206);
 }
 
 nav{
@@ -47,7 +47,7 @@ nav{
 }
 .active{
     padding-bottom: 1px;
-    border-bottom: 2px solid  #4169e1;
+    border-bottom: 2px solid  #034ea2;
 }
 .main-nav > li >a{
     color: black;
@@ -60,6 +60,6 @@ nav{
     transition: 0.25s;
 }
 .main-nav > li >a:hover{
-    border-bottom: 2px solid  #4169e1;
+    border-bottom: 2px solid  #034ea2;
     font-size: .85rem;
 }
