@@ -27,7 +27,7 @@
         <div class="hero-text-details">
           <p>A National Health Insurance Scheme approved primary <br> health provider with registration number OG/104/P</p>
           <p>It is a 24 hours operating Medical Centre with highly <br> qualified and dedicated staffs.</p>
-          <a href="tel:+2348063727471"></a>
+          <a href="tel:+2348063727471"><i class="fa-solid fa-phone">08063727471</i></a>
         </div>
 
       </div>
