@@ -9,13 +9,13 @@
     <header>
       <nav class="nav-bar">
         <div class="logo-container">
-          <img class="logo" src="resource/Images/poly-logo.png" alt="FPI logo">
+          <a href="https://federalpolyilaro.edu.ng"><img class="logo" src="https://federalpolyilaro.edu.ng/images/header-logo.png" alt="FPI logo" height="70px" width="180px"></a>
         </div>
         <ul class="main-nav">
-            <li><a href="index.php">Login</a></li>
+            <li><a class="active" href="index.php">Login</a></li>
             <li><a href="register.php">Register</a></li>
-            <li><a href="appointment.php">Apointment</a></li>
-            <li><a href="about.php">About us</a></li>
+            <li><a href="appointment.php">Appointment</a></li>
+            <li><a href="about.php">About-us</a></li>
         </ul> 
       </nav>
       <!-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
