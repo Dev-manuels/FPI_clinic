@@ -32,6 +32,7 @@ header {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }
 /* nav styling */
 nav{
@@ -76,7 +77,7 @@ nav{
 
 /* hero section styling */
 .hero-content{
-    margin: 30px 5%;
+    margin: 60px 5%;
 }
 .hero-text{
     font-size: 2rem;
@@ -85,7 +86,8 @@ nav{
 .hero-text-main{
     font-size: 2rem;
     color: rgb(238, 177, 54);
-}.hero-text-details>p{
+}
+.hero-text-details>p,.hero-text-details > a{
     color:white;
     font-size: 1rem;
 }

@@ -19,21 +19,23 @@
         </ul> 
       </nav>
       <div class="hero-content">
-        <div>
-          <h2 class="hero-text">Welcome to</h2>
-          <h2 class="hero-text-main">The Medical Centre,</h2>
-          <h2 class="hero-text-main">Federal Polytechnic Ilaro.</h2>
+        <div class="hero-main">
+          <div>
+            <h2 class="hero-text">Welcome to</h2>
+            <h2 class="hero-text-main">The Medical Centre,</h2>
+            <h2 class="hero-text-main">Federal Polytechnic Ilaro.</h2>
+          </div>
+          <div class="hero-text-details">
+            <p>A National Health Insurance Scheme approved primary <br> health provider with registration number <b>OG/104/P</b></p>
+            <p>It is a 24 hours operating Medical Centre with highly <br> qualified and dedicated staffs.</p>
+            <a href="tel:+2348063727471"><i class="fa-solid fa-phone"> 08063727471</i></a>
+          </div>
         </div>
-        <div class="hero-text-details">
-          <p>A National Health Insurance Scheme approved primary <br> health provider with registration number OG/104/P</p>
-          <p>It is a 24 hours operating Medical Centre with highly <br> qualified and dedicated staffs.</p>
-          <a href="tel:+2348063727471"><i class="fa-solid fa-phone">08063727471</i></a>
-        </div>
-
       </div>
     </header>
     <main>
-      <section>
+      <section class="departments">
+        <h2 class="dept-header">OUR departments</h2>
 
       </section>
     </main>
