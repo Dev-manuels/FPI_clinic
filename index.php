@@ -5,8 +5,6 @@
     <?php include 'links.php';?>
   </head>
   <body>
-    
-    <header>
       <nav class="nav-bar">
         <div class="logo-container">
           <a href="https://federalpolyilaro.edu.ng"><img class="logo" src="https://federalpolyilaro.edu.ng/images/header-logo.png" alt="FPI logo" height="70px" width="180px"></a>
@@ -18,6 +16,7 @@
             <li><a href="about.php">About-us</a></li>
         </ul> 
       </nav>
+    <header>
       <div class="hero-content">
         <div class="hero-main">
           <div>
@@ -35,7 +34,7 @@
     </header>
     <main>
       <section class="departments">
-        <h2 class="dept-header">OUR departments</h2>
+        <h2 class="dept-header">Our Departments</h2>
 
       </section>
     </main>

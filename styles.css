@@ -19,12 +19,12 @@ ol, ul,a{
 }
 
 body, html {
-    height: 100%;
     line-height: 1.8;
 }
 /* HEADER SECTION */
 header {
-    min-height: 100%;
+    height: 77vh;
+    margin-top: 13vh;
     background-image:
     linear-gradient(209deg, rgba(8,89,180,0.7) 0%, rgba(78,142,214,0.7) 44%, rgba(3,78,162,0.7) 100%),
     url("https://images.unsplash.com/photo-1536064479547-7ee40b74b807?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
@@ -32,17 +32,17 @@ header {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }
 /* nav styling */
 nav{
     display: flex;
     justify-content: space-between;
     height: 12vh;
-    position: sticky;
+    position: fixed;
     top: 0px;
+    width: 100%;
     align-items: center;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.76);
 }
 .logo-container{
     margin-left: 15px;
@@ -71,6 +71,7 @@ nav{
     transition: border-bottom 0.25s;
 }
 .main-nav > li >a:hover{
+    margin-top: 10px;
     border-bottom: 2px solid  rgb(238, 177, 54);
     font-size: .85rem;
 }
@@ -90,4 +91,19 @@ nav{
 .hero-text-details>p,.hero-text-details > a{
     color:white;
     font-size: 1rem;
+}
+
+.departments{
+    background-color: rgb(247, 247, 247);
+    height: 100vh;
+    padding-top: 30px;
+}
+.departments > h2{
+    color: #034ea2;
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+.arrow{
+    width: 50px;
 }
