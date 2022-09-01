@@ -13,7 +13,7 @@ h1,h2,h3,h4,h5,h6{
     margin: 0;
     padding: 0;
 }
-ol, ul,a{
+ol, ul, li{
     margin: 0;
     list-style: none;
 }
@@ -101,6 +101,8 @@ header {
     background-color: rgb(247, 247, 247);
     height: 100vh;
     padding-top: 30px;
+    display: flex;
+    flex-direction: column;
 }
 .departments > h2{
     color: #034ea2;
@@ -116,4 +118,13 @@ header {
     width: 100px;
     margin: 0 auto;
     margin-top: 10px;
+}
+.list{
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.depts-list >li {
+    margin-bottom: 30px;
 }
