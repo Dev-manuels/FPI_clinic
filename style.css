@@ -127,4 +127,12 @@ header {
 }
 .depts-list >li {
     margin-bottom: 30px;
+    font-weight: bold;
+}
+.depts-list >li:hover{
+    color:#034ea2;
+}
+footer{
+    height: 40vh;
+    background-color: #034ea2;
 }

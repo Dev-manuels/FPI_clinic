@@ -40,19 +40,19 @@
 
       <div class="list">
       <ul class="depts-list">
-        <li class="depts">Department 1</li>
-        <li class="depts">Department 2</li>
-        <li class="depts">Department 3</li>
+        <li class="depts">Outpatient Care Unit</li>
+        <li class="depts">Nursing Unit</li>
+        <li class="depts">Pharmacy Unit</li>
       </ul>
       <ul class="depts-list">
-        <li class="depts">Department 4</li>
-        <li class="depts">Department 5</li>
-        <li class="depts">Department 6</li>
+        <li class="depts">Medical Laboratory Unit</li>
+        <li class="depts">Medical Records Unit</li>
+        <li class="depts">Inpatient Care Unit</li>
       </ul>
       <ul class="depts-list">
-        <li class="depts">Department 7</li>
-        <li class="depts">Department 8</li>
-        <li class="depts">Department 9</li>
+        <li class="depts">NHIS / TISHIP Unit</li>
+        <li class="depts">Family Planning Unit</li>
+        <li class="depts">Ambulance Services</li>
       </ul>
       </div>
 
