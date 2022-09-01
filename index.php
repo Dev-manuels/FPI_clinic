@@ -13,7 +13,6 @@
             <li><a class="active" href="index.php">Login</a></li>
             <li><a href="register.php">Register</a></li>
             <li><a href="appointment.php">Appointment</a></li>
-            <li><a href="about.php">About-us</a></li>
         </ul> 
       </nav>
 
