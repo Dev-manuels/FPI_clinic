@@ -57,6 +57,24 @@
 
     </section>
     <footer>
+      <div class="footer-main">
+        <div class="footer-main-text">
+          <h2>OUR VISION</h2>
+          <p>To be the best primary health care provider to all our patients and clients.</p>
+        </div>
+        <div class="footer-main-text">
+          <h2>OUR MISSION</h2>
+          <p>To provide first class health care services to all staffs, students and other NHIS enrollees.</p>
+        </div>
+        <div class="footer-main-text">
+        <h2>OUR OBJECTIVE</h2>
+          <p>To give our patients and clients the best comfort and service whether as outpatient or inpatient.</p>
+        </div>
+      </div>
+      <div class="footer-final">
+        <a href="#header"> Back to Top</a>
+      </div>
+      
       
     </footer>
 
