@@ -48,7 +48,7 @@ nav{
     border-bottom: 2px solid  black !important;
 }
 .main-nav > li >a{
-    margin-right: 25px;
+    margin-right: 1.3rem;
     color: #034ea2;
     font-size: .9rem;
     font-weight: 600;
@@ -56,12 +56,12 @@ nav{
     padding-bottom: 1px;
     text-decoration: none;
     border-bottom: 2px solid transparent;
-    transition: border-bottom 0.25s;
+    transition: 0.25s;
 }
 .main-nav > li >a:hover{
     margin-top: 10px;
     border-bottom: 2px solid  rgb(238, 177, 54);
-    font-size: .95rem;
+    font-size: 1rem;
 }
 /* HEADER SECTION */
 header {
