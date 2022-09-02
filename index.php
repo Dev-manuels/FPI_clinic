@@ -16,7 +16,7 @@
         </ul> 
       </nav>
 
-    <main>
+    <main  id="top">
     <header>
       <div class="hero-content">
         <div class="hero-main">
@@ -72,7 +72,7 @@
         </div>
       </div>
       <div class="footer-final">
-        <a href="#header"> Back to Top</a>
+        <a href="#top"> Back to Top</a>
       </div>
       
       
