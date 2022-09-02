@@ -5,6 +5,7 @@
     <?php include 'links.php';?>
   </head>
   <body>
+    <div id="top"></div>
       <nav class="nav-bar">
         <div class="logo-container">
           <a href="https://federalpolyilaro.edu.ng"><img class="logo" src="https://federalpolyilaro.edu.ng/images/header-logo.png" alt="FPI logo" height="70px" width="180px"></a>
@@ -16,7 +17,7 @@
         </ul> 
       </nav>
 
-    <main  id="top">
+    <main>
     <header>
       <div class="hero-content">
         <div class="hero-main">
