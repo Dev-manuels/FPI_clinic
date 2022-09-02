@@ -137,11 +137,12 @@ footer{
     height: 100%;
     background-color: #034ea2;
     color: #fff;
-    height: 40vh;
+    padding-bottom: 50px;
 }
 .footer-main{
     width: 100%;
-    padding: 0 8%;
+    height: 100%;
+    padding: 5% 8%;
     padding-top: 40px;
     display: flex;
     flex-direction: row;
