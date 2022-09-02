@@ -155,9 +155,11 @@ footer{
     height: 100%;
 }
 .footer-final{
-    color: white;
     text-align: center;
 }
 .footer-final > a{
-    
+    color: white;
+    padding: 20px 30px;
+    border-radius: 30px;
+    background-color: rgb(238, 177, 54);
 }
