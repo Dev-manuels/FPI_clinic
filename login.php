@@ -26,6 +26,7 @@
             <input type="email" name="email" placeholder="Enter your Email">
             <label for="Password">Password:</label>
             <input type="password" name="password" placeholder="Enter your password">
+            <input type="submit" value="Submit">
         </div>
         </form>
 
