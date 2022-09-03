@@ -21,6 +21,12 @@
         <h2 class="hero-text-main">The Medical Centre</h2>
         <h2 class="hero-text login-text">Portal Login</h2>
         </div>
+        <div class="form-container">
+            <label for="Email">Email:</label>
+            <input type="email" name="email" placeholder="Enter your Email">
+            <label for="Password">Password:</label>
+            <input type="password" name="password" placeholder="Enter your password">
+        </div>
         </form>
 
     </main>
