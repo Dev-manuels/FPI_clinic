@@ -5,20 +5,19 @@
     <?php include 'links.php';?>
   </head>
   <body>
-    <div id="top"></div>
       <nav class="nav-bar">
         <div class="logo-container">
           <a href="https://federalpolyilaro.edu.ng"><img class="logo" src="https://federalpolyilaro.edu.ng/images/header-logo.png" alt="FPI logo" height="70px" width="180px"></a>
         </div>
         <ul class="main-nav">
-            <li><a class="active" href="index.php">Login</a></li>
+            <li><a class="active" href="login.php">Login</a></li>
             <li><a href="register.php">Register</a></li>
             <li><a href="appointment.php">Appointment</a></li>
         </ul> 
       </nav>
 
     <main>
-    <header>
+    <header id="header">
       <div class="hero-content">
         <div class="hero-main">
           <div>
@@ -73,7 +72,7 @@
         </div>
       </div>
       <div class="footer-final">
-        <a href="#top"> Back to Top</a>
+        <a href="#header"> Back to Top</a>
       </div>
       
       
