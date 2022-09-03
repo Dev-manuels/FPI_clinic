@@ -89,6 +89,14 @@ nav{
     background-size: cover;
 
 }
+.login-main-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.login-text{
+    align-self: center;
+}
 
 /* HEADER SECTION */
 header {

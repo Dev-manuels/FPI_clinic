@@ -17,8 +17,10 @@
 
     <main class="login-main">
         <form method="post">
-        <h2 class="login-text-main">The Medical Centre</h2>
-        <h2 class="login-text">Portal Login</h2>
+        <div class="login-main-text">
+        <h2 class="hero-text-main">The Medical Centre</h2>
+        <h2 class="hero-text login-text">Portal Login</h2>
+        </div>
         </form>
 
     </main>
