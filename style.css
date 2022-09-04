@@ -197,9 +197,7 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-.login-text{
-    align-self: center;
+    align-items: center;
 }
 .form-container{
     margin-top: 50px;
@@ -215,6 +213,8 @@ footer{
     font-weight: bold;
 }
 .form-input > input{
+    width: calc(100vw - 70vw);
+    min-width: 100%;
     font-weight: bold;
     color: #034ea2;
     padding-left: 10px;
@@ -235,3 +235,22 @@ footer{
 .form-submit > input:hover{
     color: rgb(245, 205, 126);
 }
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 500px) {
+    nav{
+        flex-direction: column;
+        padding-bottom: 2vh;
+    }
+    .login-main{
+        margin-top: 14vh;
+        height: 86vh;
+    }
+  }

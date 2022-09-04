@@ -19,7 +19,7 @@
         <form method="post" class="form-container">
             <div class="login-main-text">
                 <h2 class="hero-text-main">The Medical Centre</h2>
-                <h2 class="hero-text login-text">Portal Login</h2>
+                <h2 class="hero-text">Portal Login</h2>
             </div>
             <div class="form-input-container">
                 <div class="form-input">
