@@ -16,10 +16,10 @@
     </nav>
 
     <main class="login-main">
-        <form method="post">
+        <form method="post" class="form-container">
             <div class="login-main-text">
-            <h2 class="hero-text-main">The Medical Centre</h2>
-            <h2 class="hero-text login-text">Portal Login</h2>
+                <h2 class="hero-text-main">The Medical Centre</h2>
+                <h2 class="hero-text login-text">Portal Login</h2>
             </div>
             <div class="form-input-container">
                 <div class="form-input">
@@ -32,7 +32,9 @@
                     <label for="Password">Password:</label>
                     <input type="password" name="password" placeholder="Enter your password">
                 </div>
-                <input type="submit" value="Submit">
+                <div class="form-submi">
+                    <input type="submit" value="Submit">
+                </div>
             </div>
         </form>
 

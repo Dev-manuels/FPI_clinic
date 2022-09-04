@@ -201,3 +201,23 @@ footer{
 .login-text{
     align-self: center;
 }
+.form-container{
+    margin-top: 50px;
+}
+.form-input{
+    display: flex;
+    flex-direction: column;
+}
+.form-input > label{
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.form-input > input{
+    font-weight: bold;
+    color: #034ea2;
+    padding-left: 3px;
+    height: 40px;
+    border-color: transparent;
+    border-radius: 5px;
+}
