@@ -17,18 +17,23 @@
 
     <main class="login-main">
         <form method="post">
-        <div class="login-main-text">
-        <h2 class="hero-text-main">The Medical Centre</h2>
-        <h2 class="hero-text login-text">Portal Login</h2>
-        </div>
-        <div class="form-container">
-            <label for="Email">Email:</label>
-            <input type="email" name="email" placeholder="Enter your Email">
-            <label for="Password">Password:</label>
-            <input type="text" name="username" style="display: none;">
-            <input type="password" name="password" placeholder="Enter your password">
-            <input type="submit" value="Submit">
-        </div>
+            <div class="login-main-text">
+            <h2 class="hero-text-main">The Medical Centre</h2>
+            <h2 class="hero-text login-text">Portal Login</h2>
+            </div>
+            <div class="form-input-container">
+                <div class="form-input">
+                    <label for="Email">Email:</label>
+                    <input type="email" name="email" placeholder="Enter your Email">
+                </div>
+
+                <input type="text" name="username" style="display: none;">
+                <div class="form-input">
+                    <label for="Password">Password:</label>
+                    <input type="password" name="password" placeholder="Enter your password">
+                </div>
+                <input type="submit" value="Submit">
+            </div>
         </form>
 
     </main>
