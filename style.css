@@ -204,7 +204,8 @@ footer{
 .form-container{
     margin-top: 50px;
 }
-.form-input{
+.form-input, .form-submit{
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
 }
@@ -216,8 +217,21 @@ footer{
 .form-input > input{
     font-weight: bold;
     color: #034ea2;
-    padding-left: 3px;
+    padding-left: 10px;
     height: 40px;
     border-color: transparent;
     border-radius: 5px;
+}
+.form-submit > input{
+    font-weight: bold;
+    background-color: #034ea2;
+    border-radius: 20px;
+    color: #fff;
+    align-self: center;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+}
+.form-submit > input:hover{
+    color: rgb(245, 205, 126);
 }
