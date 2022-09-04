@@ -200,20 +200,25 @@ footer{
     align-items: center;
 }
 .form-container{
-    margin-top: 50px;
+    margin-top: 25px;
 }
 .form-input, .form-submit{
     margin-top: 10px;
     display: flex;
     flex-direction: column;
 }
+.form-row{
+    display: flex;
+    flex-direction: row;
+    /* gap: 40px; */
+    justify-content: space-between;
+}
 .form-input > label{
     color: #fff;
     font-size: 1.2rem;
     font-weight: bold;
 }
-.form-input > input{
-    width: calc(100vw - 70vw);
+.form-input > input,select{
     min-width: 100%;
     font-weight: bold;
     color: #034ea2;
@@ -222,7 +227,10 @@ footer{
     border-color: transparent;
     border-radius: 5px;
 }
-.form-submit > input{
+.form-input > .large{
+    width: calc(100vw - 70vw);
+}
+.form-submit > input[type=submit]{
     font-weight: bold;
     background-color: #034ea2;
     border-radius: 20px;
@@ -232,7 +240,7 @@ footer{
     height: 40px;
     cursor: pointer;
 }
-.form-submit > input:hover{
+.form-submit > input[type=submit]:hover{
     color: rgb(245, 205, 126);
 }
 

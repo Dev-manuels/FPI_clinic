@@ -21,23 +21,63 @@
         <form method="post" class="form-container">
             <div class="login-main-text">
                 <h2 class="hero-text-main">The Medical Centre</h2>
-                <h2 class="hero-text">Registration Portal</h2>
+                <h2 class="hero-text">Student Registration Portal</h2>
             </div>
             <div class="form-input-container">
                 <div class="form-input">
-                    <label for="Email">Email:</label>
-                    <input type="email" name="email" placeholder="Enter your Email">
+                    <label for="name">Full Name</label>
+                    <input class="large" type="text" name="name" placeholder="Enter your Full name">
                 </div>
-                <div class="form-input">
-                    <label for="Password">Position:</label>
-                    <input type="text" name="position" placeholder="Enter your position">
+                <div class="form-row">
+                    <div class="form-input">
+                        <label for="matric">Matric No:</label>
+                        <input type="text" name="matric" placeholder="Enter your Maric number">
+                    </div>
+                    <div class="form-input">
+                        <label for="DOB">Date of Birth</label>
+                        <input type="date" name="DOB">
+                    </div>
+               </div>
+                
+                <div class="form-row">
+                    <div class="form-input">
+                        <label for="parent name">Parent name:</label>
+                        <input type="text" name="p_name" placeholder="Enter your parent's name">
+                    </div>
+                    <div class="form-input">
+                        <label for="Parent">Select parent</label>
+                        <select name="parent">
+                            <option value="">Select parent</option>
+                            <option value="Father">Father</option>
+                            <option value="Mother">Mother</option>
+                        </select>
+                    </div>
                 </div>
-
-                <input type="text" name="username" style="display: none;">
-                <div class="form-input">
-                    <label for="Password">Password:</label>
-                    <input type="password" name="password" placeholder="Enter your password">
+                <div class="form-row">
+                    <div class="form-input">
+                        <label for="Genotype">Genotype</label>
+                        <select name="genotype">
+                            <option value="AA">AA</option>
+                            <option value="AC">AC</option>
+                            <option value="AS">AS</option>
+                            <option value="SS">SS</option>
+                        </select>
+                    </div>
+                    <div class="form-input">
+                        <label for="Blood Group">Blood Group</label>
+                        <select name="bloodG">
+                            <option value="-A">-A</option>
+                            <option value="+A">+A</option>
+                            <option value="-AB">-AB</option>
+                            <option value="+AB">+AB</option>
+                            <option value="+B">+B</option>
+                            <option value="-B">-B</option>
+                            <option value="+O">+O</option>
+                            <option value="-O">-O</option>
+                        </select>
+                    </div>
                 </div>
+                
                 <div class="form-submit">
                     <input type="submit" value="Register">
                 </div>
