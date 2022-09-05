@@ -24,13 +24,13 @@
             <div class="form-input-container">
                 <div class="form-input">
                     <label for="Email">Email:</label>
-                    <input type="email" name="email" placeholder="Enter your Email">
+                    <input class="large" type="email" name="email" placeholder="Enter your Email">
                 </div>
 
                 <input type="text" name="username" style="display: none;">
                 <div class="form-input">
                     <label for="Password">Password:</label>
-                    <input type="password" name="password" placeholder="Enter your password">
+                    <input class="large" type="password" name="password" placeholder="Enter your password">
                 </div>
                 <div class="form-submit">
                     <input type="submit" value="Submit">
