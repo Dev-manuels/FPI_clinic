@@ -17,11 +17,11 @@
             <li><a href="appointment.php">Appointment</a></li>
         </ul> 
     </nav>
-    <main class="login-main">
+    <main class="main register-main">
         <form method="post" class="form-container">
             <div class="login-main-text">
                 <h2 class="hero-text-main">The Medical Centre</h2>
-                <h2 class="hero-text">Student Registration Portal</h2>
+                <h2 class="hero-text">Student Registration</h2>
             </div>
             <div class="form-input-container">
                 <div class="form-input">
@@ -39,18 +39,22 @@
                     </div>
                </div>
                 
+                <div class="form-input">
+                    <label for="parent name">Parent name:</label>
+                    <input class="large" type="text" name="p_name" placeholder="Enter your parent's name">
+                </div>
+
                 <div class="form-row">
                     <div class="form-input">
-                        <label for="parent name">Parent name:</label>
-                        <input type="text" name="p_name" placeholder="Enter your parent's name">
-                    </div>
-                    <div class="form-input">
-                        <label for="Parent">Select parent</label>
+                        <label for="Parent">Select Parent Role</label>
                         <select name="parent">
-                            <option value="">Select parent</option>
                             <option value="Father">Father</option>
                             <option value="Mother">Mother</option>
                         </select>
+                    </div>
+                    <div class="form-input">
+                        <label for="parent number">Parent number:</label>
+                        <input type="tel" name="p_number" placeholder="Parent's number">
                     </div>
                 </div>
                 <div class="form-row">
@@ -64,12 +68,13 @@
                         </select>
                     </div>
                     <div class="form-input">
+                        
                         <label for="Blood Group">Blood Group</label>
                         <select name="bloodG">
-                            <option value="-A">-A</option>
                             <option value="+A">+A</option>
-                            <option value="-AB">-AB</option>
+                            <option value="-A">-A</option>
                             <option value="+AB">+AB</option>
+                            <option value="-AB">-AB</option>
                             <option value="+B">+B</option>
                             <option value="-B">-B</option>
                             <option value="+O">+O</option>

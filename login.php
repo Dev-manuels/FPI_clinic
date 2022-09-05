@@ -15,7 +15,7 @@
         </ul> 
     </nav>
 
-    <main class="login-main">
+    <main class="main">
         <form method="post" class="form-container">
             <div class="login-main-text">
                 <h2 class="hero-text-main">The Medical Centre</h2>

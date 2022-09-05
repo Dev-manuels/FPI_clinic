@@ -179,7 +179,7 @@ footer{
     font-size: 1rem;
 } */
 /* main */
-.login-main{
+.main{
     display: flex;
     justify-content: center;
     margin-top: 12vh;
@@ -198,6 +198,10 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.register-main{
+    height: fit-content;
+    padding-bottom: 60px;
 }
 .form-container{
     margin-top: 25px;
@@ -260,5 +264,11 @@ footer{
     .login-main{
         margin-top: 14vh;
         height: 86vh;
+    }
+    form{
+        width: 80%;
+    }
+    .form-row{
+        flex-direction: column;
     }
   }
