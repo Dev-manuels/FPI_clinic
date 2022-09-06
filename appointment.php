@@ -86,8 +86,12 @@ $now = date_format($date,"Y-m-d");
                             <option value="INSURANCE">
                                 INSURANCE
                             </option>
-                            <option value=""></option>
-                            <option value=""></option>
+                            <option value="LEISURE AND TOURISM MANAGEMENT">
+                                LEISURE AND TOURISM MANAGEMENT
+                            </option>
+                            <option value="LIBRARY AND INFORMATION SCIENCE">
+                                LIBRARY AND INFORMATION SCIENCE
+                            </option>
                             <option value=""></option>
                             <option value=""></option>
                             <option value=""></option>
