@@ -92,18 +92,32 @@ $now = date_format($date,"Y-m-d");
                             <option value="LIBRARY AND INFORMATION SCIENCE">
                                 LIBRARY AND INFORMATION SCIENCE
                             </option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
+                            <option value="MARKETING">
+                                MARKETING
+                            </option>
+                            <option value="MASS COMMUNICATION">
+                                MASS COMMUNICATION
+                            </option>
+                            <option value="MECHANICAL ENGINEERING TECHNOLOGY">
+                                MECHANICAL ENGINEERING TECHNOLOGY
+                            </option>
+                            <option value="MUSIC TECHNOLOGY">
+                                MUSIC TECHNOLOGY
+                            </option>
+                            <option value="NUTRITION AND DIETETICS">
+                                NUTRITION AND DIETETICS
+                            </option>
+                            <option value="OFFICE TECHNOLOGY AND MANAGEMENT">
+                                OFFICE TECHNOLOGY AND MANAGEMENT
+                            </option>
+                            <option value="PUBLIC ADMINISTRATION">PUBLIC ADMINISTRATION</option>
+                            <option value="QUANTITY SURVEYING">QUANTITY SURVEYING</option>
+                            <option value="SCIENCE LABORATORY TECHNOLOGY">SCIENCE LABORATORY TECHNOLOGY</option>
+                            <option value="STATISTICS">STATISTICS</option>
+                            <option value="SURVEYING AND GEO-INFORMATICS">SURVEYING AND GEO-INFORMATICS</option>
+                            <option value="TAXATION">TAXATION</option>
+                            <option value="TRANSPORTATION PLANNING & MANAGEMENT">TRANSPORTATION PLANNING & MANAGEMENT</option>
+                            <option value="URBAN AND REGIONAL PLANNING">URBAN AND REGIONAL PLANNING</option>
                         </select>
                 </div>
                 <div class="form-row">
