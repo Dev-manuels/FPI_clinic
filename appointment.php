@@ -74,7 +74,9 @@ $now = date_format($date,"Y-m-d");
                             <option value="ELECTRICAL/ELECTRONIC ENGINEERING TECHNOLOGY">
                                 ELECTRICAL/ELECTRONIC ENGINEERING TECHNOLOGY
                             </option>
-                            <option value=""></option>
+                            <option value="ESTATE MANAGEMENT AND VALUATION">
+                                ESTATE MANAGEMENT AND VALUATION
+                            </option>
                             <option value=""></option>
                             <option value=""></option>
                             <option value=""></option>
