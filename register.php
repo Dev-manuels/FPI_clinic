@@ -26,41 +26,41 @@
             <div class="form-input-container">
                 <div class="form-input">
                     <label for="name">Full Name</label>
-                    <input class="large" type="text" name="name" placeholder="Enter your Full name">
+                    <input class="large" type="text" name="name" placeholder="Enter your Full name" minlength="10" required>
                 </div>
                 <div class="form-row">
                     <div class="form-input">
                         <label for="matric">Matric No:</label>
-                        <input type="text" name="matric" placeholder="Enter your Maric number">
+                        <input type="text" name="matric" placeholder="Enter your Matric number" minlength="8" required>
                     </div>
                     <div class="form-input">
                         <label for="DOB">Date of Birth</label>
-                        <input type="date" name="DOB">
+                        <input type="date" name="DOB" required>
                     </div>
                </div>
                 
                 <div class="form-input">
                     <label for="parent name">Parent name:</label>
-                    <input class="large" type="text" name="p_name" placeholder="Enter your parent's name">
+                    <input class="large" type="text" name="p_name" placeholder="Enter your parent's fullname" minlength="10" required>
                 </div>
 
                 <div class="form-row">
                     <div class="form-input">
                         <label for="Parent">Select Parent Role</label>
-                        <select name="parent">
+                        <select name="parent" required>
                             <option value="Father">Father</option>
                             <option value="Mother">Mother</option>
                         </select>
                     </div>
                     <div class="form-input">
                         <label for="parent number">Parent number:</label>
-                        <input type="tel" name="p_number" placeholder="Parent's number">
+                        <input type="tel" name="p_number" placeholder="Parent's number" minlength="11" required>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-input">
                         <label for="Genotype">Genotype</label>
-                        <select name="genotype">
+                        <select name="genotype" required>
                             <option value="AA">AA</option>
                             <option value="AC">AC</option>
                             <option value="AS">AS</option>
@@ -70,7 +70,7 @@
                     <div class="form-input">
                         
                         <label for="Blood Group">Blood Group</label>
-                        <select name="bloodG">
+                        <select name="bloodG" required>
                             <option value="+A">+A</option>
                             <option value="-A">-A</option>
                             <option value="+AB">+AB</option>

@@ -1,3 +1,8 @@
+<?php
+$date = new DateTime();
+$now = date_format($date,"Y-m-d");
+?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -26,24 +31,32 @@
             <div class="form-input-container">
                 <div class="form-input">
                     <label for="name">Full Name</label>
-                    <input class="large" type="text" name="name" placeholder="Enter your Full name">
+                    <input class="large" type="text" name="name" placeholder="Enter your Full name" minlength="15" required>
                 </div>
                 <div class="form-input">
                         <label for="matric">Matric No:</label>
-                        <input type="text" name="matric" placeholder="Enter your Maric number">
+                        <input type="text" name="matric" placeholder="Enter your Matric number" minlength="8" required>
                 </div>
                <div class="form-input">
                         <label for="parent number">Department:</label>
-                        <input type="text" name="dept" placeholder="Enter your Department">
+                        <input type="text" name="dept" placeholder="Enter your Department" required>
+                        <select name="department">
+
+                        </select>
                 </div>
                 <div class="form-row">
                     <div class="form-input">
-                        <label for="Time">Time:</label>
-                        <input type="time" name="time">
+                        <label for="Time">Time (8:30am to 3pm):</label>
+                        <input type="time" name="time" min="08:30" max="15:00" required>
                     </div>
                     <div class="form-input">
-                        <label for="DOB">Date</label>
-                        <input type="date" name="DOB">
+                        <label for="date">Date</label>
+                        <?php $now = date("Y-m-d");
+                            $date=date_create($now);
+                            date_add($date,date_interval_create_from_date_string("1 day"));
+                            $now = date_format($date,"Y-m-d");
+                            echo '<input type="date" name="date" min="'.$now.'" required> '   
+                        ?>
                     </div>
                </div>
                
