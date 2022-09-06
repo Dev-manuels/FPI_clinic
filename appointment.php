@@ -39,9 +39,59 @@ $now = date_format($date,"Y-m-d");
                 </div>
                <div class="form-input">
                         <label for="parent number">Department:</label>
-                        <input type="text" name="dept" placeholder="Enter your Department" required>
                         <select name="department">
-
+                            <option value="ACCOUNTANCY">ACCOUNTANCY</option>
+                            <option value="AGRICULTURAL AND BIO-ENVIRONMENTAL ENGINEERING TECHNOLOGY">
+                                AGRICULTURAL AND BIO-ENVIRONMENTAL ENGINEERING TECHNOLOGY
+                            </option>
+                            <option value="AGRICULTURAL TECHNOLOGY">
+                                AGRICULTURAL TECHNOLOGY
+                            </option>
+                            <option value="ARCHITECTURAL TECHNOLOGY">
+                                ARCHITECTURAL TECHNOLOGY
+                            </option>
+                            <option value="ARTS AND DESIGN">
+                                ARTS AND DESIGN
+                            </option>
+                            <option value="BANKING AND FINANCE">
+                                BANKING AND FINANCE
+                            </option>
+                            <option value="BUILDING TECHNOLOGY">
+                                BUILDING TECHNOLOGY
+                            </option>
+                            <option value="BUSINESS ADMINISTRATION & MANAGEMENT">
+                                BUSINESS ADMINISTRATION & MANAGEMENT
+                            </option>
+                            <option value="CIVIL ENGINEERING TECHNOLOGY">
+                                CIVIL ENGINEERING TECHNOLOGY
+                            </option>
+                            <option value="COMPUTER ENGINEERING">
+                                COMPUTER ENGINEERING
+                            </option>
+                            <option value="COMPUTER SCIENCE">
+                                COMPUTER SCIENCE
+                            </option>
+                            <option value="ELECTRICAL/ELECTRONIC ENGINEERING TECHNOLOGY">
+                                ELECTRICAL/ELECTRONIC ENGINEERING TECHNOLOGY
+                            </option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
                         </select>
                 </div>
                 <div class="form-row">
