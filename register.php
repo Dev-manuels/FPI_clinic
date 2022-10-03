@@ -65,6 +65,7 @@
                             <option value="AC">AC</option>
                             <option value="AS">AS</option>
                             <option value="SS">SS</option>
+                            <option value="SC">SC</option>
                         </select>
                     </div>
                     <div class="form-input">

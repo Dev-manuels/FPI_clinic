@@ -48,7 +48,11 @@ nav{
     padding-bottom: 1px;
     border-bottom: 2px solid  black !important;
 }
-.main-nav > li >a{
+.btn-logout{
+    background-color: #fff;
+    border: 0;
+}
+.main-nav > li >a,.btn-logout{
     margin-right: 1.3rem;
     color: #034ea2;
     font-size: .9rem;
@@ -64,6 +68,7 @@ nav{
     border-bottom: 2px solid  rgb(238, 177, 54);
     font-size: 1rem;
 }
+
 
 /* HEADER SECTION */
 header {

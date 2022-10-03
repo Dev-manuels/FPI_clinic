@@ -1,7 +1,9 @@
+<!-- 
 <?php
-$date = new DateTime();
-$now = date_format($date,"Y-m-d");
+    include 'connection.php';
+    
 ?>
+-->
 
 <html lang="en">
 <head>
@@ -9,7 +11,7 @@ $now = date_format($date,"Y-m-d");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php include 'links.php';?>
-    <title>Appointments</title>
+    <title>Reservations</title>
 </head>
 <body>
 <nav class="nav-bar login-bar">
@@ -19,14 +21,14 @@ $now = date_format($date,"Y-m-d");
         <ul class="main-nav login-links">
             <li><a class="active" href="index.php">Home</a></li>
             <li><a href="login.php">Login</a></li>
-            <li><a href="appointment.php">Appointment</a></li>
+            <li><a href="register.php">Register</a></li>
         </ul> 
     </nav>
     <main class="main">
         <form method="post" class="form-container" >
             <div class="login-main-text">
                 <h2 class="hero-text-main">The Medical Centre</h2>
-                <h2 class="hero-text">Appointments</h2>
+                <h2 class="hero-text">Reservations</h2>
             </div>
             <div class="form-input-container">
                 <div class="form-input">
