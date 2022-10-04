@@ -1,7 +1,7 @@
 <!-- 
 <?php
     include 'connection.php';
-    
+    session_start();
 ?>
 -->
 
@@ -139,7 +139,7 @@
                </div>
                
                 <div class="form-submit">
-                    <input type="submit" value="Book">
+                    <input type="submit" value="Reserve" name="submit">
                 </div>
             </div>
         </form>
@@ -149,6 +149,6 @@
     
     
     
-    
+    <?php include 'scripts.php'; ?>
 </body>
 </html>

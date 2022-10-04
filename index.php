@@ -1,3 +1,8 @@
+<?php
+    include 'connection.php';
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -26,8 +31,7 @@
             <h2 class="hero-text-main">Federal Polytechnic Ilaro.</h2>
           </div>
           <div class="hero-text-details">
-            <p>A National Health Insurance Scheme approved primary <br> health provider with registration number <b>OG/104/P</b></p>
-            <p>It is a 24 hours operating Medical Centre with highly <br> qualified and dedicated staffs.</p>
+            <p>A National Health Insurance Scheme approved primary  health provider with registration number <span>OG/104/P</span>. It is a 24 hours operating Medical Centre with highly qualified and dedicated staffs.</p>
             <a href="tel:+2348063727471"><i class="fa-solid fa-phone"> 08063727471</i></a>
           </div>
         </div>

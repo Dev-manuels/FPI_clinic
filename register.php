@@ -1,3 +1,7 @@
+<?php
+    include 'connection.php';
+    session_start();
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -94,6 +98,6 @@
     </main>
     
     
-    
+    <?php include 'scripts.php'; ?>
 </body>
 </html>
