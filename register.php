@@ -1,7 +1,60 @@
 <?php
-    include 'connection.php';
-    session_start();
+  include 'connection.php';
+
+  $output="";
+
+  if(isset($_POST['register'])){
+    $name=$_POST['name'];
+    $matric=$_POST['matric'];
+    $dob=$_POST['dob'];
+    $parent=$_POST['parent'];
+    $role=$_POST['role'];
+    $phone=$_POST['phone'];
+    $genotype=$_POST['genotype'];
+    $bloodgroup=$_POST['bloodgroup'];
+    $status="Pending";
+
+    
+    $query = " SELECT * FROM student WHERE matric = '$matric'";
+    $res = mysqli_query($con,$query);
+
+
+
+    if(empty($matric)){
+      $output .= "Matric number can not empty";
+    } else if(empty($name)){
+      $output .= "Name can not empty";
+    } else if(empty($dob)){
+      $output .= "Please select Date of Birth";
+    } else if(empty($parent)){
+      $output .= "Parent name can not empty";
+    }  else if(empty($role)){
+      $output .= "Please select Parent role";
+    } else if(empty($phone)){
+        $output .= "Parent number can not empty";
+    } else if(empty($genotype)){
+        $output .= "Please select Genotype";
+    } else if(empty($bloodgroup)){
+        $output .= "Please select Blood group";
+    } else if(mysqli_num_rows($res) == 1){
+        $output .= "Matric number has already been registred, Visit the clinic to update your details";
+    }
+     else {
+    $sql="insert into `student` (name,matric,dob,parent,role,phone,genotype,bloodgroup,status) 
+    values('$name','$matric','$dob','$parent','$role','$phone','$genotype','$bloodgroup','$status')";
+      $result=mysqli_query($con,$sql);
+
+      if ($result) {
+        header('location:success.php');
+      } else {
+        die(mysqli_error($con));
+      }
+    }
+  }
+
 ?>
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,16 +64,7 @@
     <title>Register</title>
 </head>
 <body>
-    <nav class="nav-bar login-bar">
-        <div class="logo-container">
-          <a href="https://federalpolyilaro.edu.ng"><img class="logo" src="https://federalpolyilaro.edu.ng/images/header-logo.png" alt="FPI logo" height="70px" width="180px"></a>
-        </div>
-        <ul class="main-nav login-links">
-            <li><a class="active" href="index.php">Home</a></li>
-            <li><a href="login.php">Login</a></li>
-            <li><a href="appointment.php">Appointment</a></li>
-        </ul> 
-    </nav>
+<?php include 'nav.php';?>
     <main class="main register-main">
         <form method="post" class="form-container">
             <div class="login-main-text">
@@ -28,6 +72,7 @@
                 <h2 class="hero-text">Student Registration</h2>
             </div>
             <div class="form-input-container">
+            <div style="color: red;, font-size: 2rem;"><b><?php echo $output  ?></b></div>
                 <div class="form-input">
                     <label for="name">Full Name</label>
                     <input class="large" type="text" name="name" placeholder="Enter your Full name" minlength="10" required>
@@ -39,26 +84,26 @@
                     </div>
                     <div class="form-input">
                         <label for="DOB">Date of Birth</label>
-                        <input type="date" name="DOB" required>
+                        <input type="date" name="dob" required>
                     </div>
                </div>
                 
                 <div class="form-input">
                     <label for="parent name">Parent name:</label>
-                    <input class="large" type="text" name="p_name" placeholder="Enter your parent's fullname" minlength="10" required>
+                    <input class="large" type="text" name="parent" placeholder="Enter your parent's fullname" minlength="10" required>
                 </div>
 
                 <div class="form-row">
                     <div class="form-input">
                         <label for="Parent">Select Parent Role</label>
-                        <select name="parent" required>
+                        <select name="role" required>
                             <option value="Father">Father</option>
                             <option value="Mother">Mother</option>
                         </select>
                     </div>
                     <div class="form-input">
                         <label for="parent number">Parent number:</label>
-                        <input type="tel" name="p_number" placeholder="Parent's number" minlength="11" required>
+                        <input type="tel" name="phone" placeholder="Parent's number" minlength="11" required>
                     </div>
                 </div>
                 <div class="form-row">
@@ -75,7 +120,7 @@
                     <div class="form-input">
                         
                         <label for="Blood Group">Blood Group</label>
-                        <select name="bloodG" required>
+                        <select name="bloodgroup" required>
                             <option value="+A">+A</option>
                             <option value="-A">-A</option>
                             <option value="+AB">+AB</option>
@@ -89,7 +134,7 @@
                 </div>
                 
                 <div class="form-submit">
-                    <input type="submit" value="Register">
+                    <input type="submit" value="Register" name="register">
                 </div>
             </div>
         </form>
