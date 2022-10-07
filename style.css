@@ -224,6 +224,12 @@ footer{
     justify-content: center;
     align-items: center;
 }
+.main-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 .register-main{
     height: fit-content;
     padding-bottom: 60px;
@@ -263,15 +269,17 @@ footer{
     font-weight: bold;
     background-color: #034ea2;
     border-radius: 20px;
-    color: #fff;
+    color: rgb(245, 205, 126);
     align-self: center;
     width: 100px;
     height: 40px;
     cursor: pointer;
 }
 .form-submit > input[type=submit]:hover{
-    color: rgb(245, 205, 126);
+    color: #fff;
 }
+
+/* TABLE STYLE */
 .table-container{
     width:98%; 
     margin:1%; 
@@ -281,6 +289,18 @@ footer{
     margin-left:auto; 
     margin-right:auto; 
     width:100%;
+    margin-bottom: 20px;
+  }
+
+/* Success page style */
+.success-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .success-img{
+    height: 50%;
+    width: auto;
   }
 
 
