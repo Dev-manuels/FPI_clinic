@@ -23,7 +23,7 @@
   <body>
     <?php include 'nav.php'; ?>
     <main>
-      <a href="dashboard.php"><button>Back</button></a>
+      <a href="dashboard.php"><button>Back to Dashboard</button></a>
       
    
       <div class="main-text">
@@ -35,13 +35,12 @@
       <thead class="">
         <tr>
           <!-- <th scope="col">#</th> -->
+          <th scope="col">NAME</th>
           <th scope="col">MATRIC NO</th>
-          <th scope="col">SURNAME</th>
-          <th scope="col">OTHER NAMES</th>
-          <th scope="col">PHONE NO</th>
-          <th scope="col">MAC ADDRESS</th>
-          <th scope="col">REGISTATION-STATUS</th>
-          <th scope="col">ENTRY-DATE</th>
+          <th scope="col">DEPARTMENT</th>
+          <th scope="col">DATE</th>
+          <th scope="col">TIME</th>
+          <th scope="col">RESERVATION-STATUS</th>
           <th scope="col">OPERATIONS</th>
         </tr>
       </thead>
@@ -52,34 +51,32 @@
 
         <!-- php code to read from database and display-->
         <?php 
-          $sql= "SELECT * from `studentRecord`";
+          $sql= "SELECT * from `appointment` ORDER BY `appointment`.`date` ASC";
           $result = mysqli_query($con,$sql);
           
           if($result){
             while ($row=mysqli_fetch_assoc($result)) {
               $id=$row['id'];
+              $name=$row['name'];
               $matric=$row['matric'];
-              $surname=$row['surname'];
-              $other=$row['other'];
-              $phone=$row['phone'];
-              $mac=$row['mac'];
-              $status=$row['status'];
+              $department=$row['department'];
+              $time=$row['time'];
               $date=$row['date'];
+              $status=$row['status'];
+              
               
               //<th scope="row">'.$id.'</th>
               echo ' <tr>
               
-              <td><b>'.$matric.'</b></td>
-              <td><b>'.$surname.'</b></td>
-              <td><b>'.$other.'</b></td>
-              <td><b>'.$phone.'</b></td>
-              <td><b>'.$mac.'</b></td>
-              <td><b>'.$status.'</b></td>
-              <td><b>'.$date.'</b></td>
+              <td>'.$name.'</td>
+              <td>'.$matric.'</td>
+              <td>'.$department.'</td>
+              <td>'.$time.'</td>
+              <td>'.$date.'</td>
+              <td>'.$status.'</td>
               <td>
-              <a href="update.php?updateid='.$id.'"" ><button>UPDATE</button></a>
-              <a href="delete.php?deleteid='.$id.'" ><button>DELETE</button></a>
-              <a href="done.php?doneid='.$id.'" ><button>DONE</button></a>
+              <a href="delete.php?deleteid='.$id.'&table=appointment" ><button>DELETE</button></a>
+              <a href="done.php?doneid='.$id.'&table=appointment" ><button>APPROVE</button></a>
               </td>
             </tr>' ;   
             }
