@@ -84,12 +84,13 @@
               <td>'.$bloodgroup.'</td>
               <td>'.$status.'</td>
               <td>
-              <a href="done.php?doneid='.$id.'&table=student" ><button>DONE</button></a>
+              <a href="done.php?doneid='.$id.'&table=student" ><button>UPDATE STATUS</button></a>
               </td>
             </tr>' ;   
             }
           }
         ?>
+        </tbody>
         </table>
       </div>
 
@@ -152,12 +153,13 @@
               <td>'.$bloodgroup.'</td>
               <td>'.$status.'</td>
               <td>
-              <a href="done.php?doneid='.$id.'&table=student" ><button>DONE</button></a>
+              <a href="update.php?updateid='.$id.'&table=student" ><button>UPDATE DETAILS</button></a>
               </td>
             </tr>' ;   
             }
           }
         ?>
+        </tbody>
         </table>
       </div>
     </main>
