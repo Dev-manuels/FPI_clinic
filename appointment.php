@@ -1,10 +1,49 @@
-<!-- 
+
 <?php
     include 'connection.php';
     session_start();
-?>
--->
+    $output="";
 
+  if(isset($_POST['Reserve'])){
+    $name=$_POST['name'];
+    $matric=$_POST['matric'];
+    $department=$_POST['department'];
+    $time=$_POST['time'];
+    $date=$_POST['date'];
+    $status="Pending";
+
+    
+    $query = " SELECT * FROM appointment WHERE matric = '$matric'";
+    $res = mysqli_query($con,$query);
+
+
+
+    if(empty($matric)){
+      $output .= "Matric number can not empty";
+    } else if(empty($name)){
+      $output .= "Name can not empty";
+    } else if(empty($department)){
+      $output .= "Please select Date of Birth";
+    } else if(empty($time)){
+      $output .= "Please pick a time";
+    }  else if(empty($date)){
+      $output .= "Please select a date";
+    } else if(mysqli_num_rows($res) == 1){
+        $output .= "You already have a scheduled appointment";
+    }
+     else {
+    $sql="INSERT INTO `appointment` (name,matric,department,date,time,status) 
+    VALUES('$name','$matric','$department','$date','$time','$status')";
+      $result=mysqli_query($con,$sql);
+
+      if ($result) {
+        header('location:success.php');
+      } else {
+        die(mysqli_error($con));
+      }
+    }
+  }
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -22,16 +61,17 @@
                 <h2 class="hero-text">Reservations</h2>
             </div>
             <div class="form-input-container">
+            <div style="color: red;, font-size: 2rem;"><b><?php echo $output  ?></b></div>
                 <div class="form-input">
                     <label for="name">Full Name</label>
-                    <input class="large" type="text" name="name" placeholder="Enter your Full name" minlength="15" required>
+                    <input class="large" type="text" name="name" placeholder="Enter your Full name" minlength="5" required>
                 </div>
                 <div class="form-input">
                         <label for="matric">Matric No:</label>
                         <input type="text" name="matric" placeholder="Enter your Matric number" minlength="8" required>
                 </div>
                <div class="form-input">
-                        <label for="parent number">Department:</label>
+                        <label for="Department">Department:</label>
                         <select name="department">
                             <option value="ACCOUNTANCY">ACCOUNTANCY</option>
                             <option value="AGRICULTURAL AND BIO-ENVIRONMENTAL ENGINEERING TECHNOLOGY">
@@ -130,7 +170,7 @@
                </div>
                
                 <div class="form-submit">
-                    <input type="submit" value="Reserve" name="submit">
+                    <input type="submit" value="Reserve" name="Reserve">
                 </div>
             </div>
         </form>
