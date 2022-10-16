@@ -20,7 +20,7 @@
     <?php include 'links.php';?>
     <title>DASHBOARD</title>
   </head>
-  <body>
+  <body class="main-dashboard">
     <?php include 'nav.php'; ?>
     <main>
       <a href="booking.php"><button>Manage Appointments</button></a>
@@ -54,7 +54,7 @@
 
         <!-- php code to read from database and display-->
         <?php 
-          $sql= "SELECT * from `student` ORDER BY `student`.`date` ASC";
+          $sql= "SELECT * from `student` WHERE status = 'Pending' ORDER BY `student`.`date` ASC";
           $result = mysqli_query($con,$sql);
           
           if($result){
@@ -84,7 +84,8 @@
               <td>'.$bloodgroup.'</td>
               <td>'.$status.'</td>
               <td>
-              <a href="done.php?doneid='.$id.'&table=student" ><button>UPDATE STATUS</button></a>
+              <a href="delete.php?deleteid='.$id.'&table=student" ><button class="btn-update">DELETE</button></a>
+              <a href="done.php?doneid='.$id.'&table=student" ><button class="btn-update">UPDATE STATUS</button></a>
               </td>
             </tr>' ;   
             }
@@ -153,7 +154,7 @@
               <td>'.$bloodgroup.'</td>
               <td>'.$status.'</td>
               <td>
-              <a href="update.php?updateid='.$id.'&table=student" ><button>UPDATE DETAILS</button></a>
+              <a href="update.php?updateid='.$id.'&table=student" ><button class="btn-update">UPDATE DETAILS</button></a>
               </td>
             </tr>' ;   
             }

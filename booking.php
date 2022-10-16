@@ -20,7 +20,7 @@
     <?php include 'links.php';?>
     <title>Reservations</title>
   </head>
-  <body>
+  <body class="main-dashboard">
     <?php include 'nav.php'; ?>
     <main>
       <a href="dashboard.php"><button>Back to Dashboard</button></a>

@@ -190,19 +190,19 @@ footer{
     background-color:#fff;
     color: #034ea2;
 }
+/* dashboard */
 
-
-/* LOGIN PAGE STYLE */
-
-/* nav bar */
-/* .login-bar{
-    background-color: rgba(238, 177, 54,0.76);
-}
-.login-links > li >a:hover{
-    margin-top: 10px;
-    border-bottom: 2px solid  #fff;
-    font-size: 1rem;
-} */
+.main-dashboard{
+    background-image:
+    linear-gradient(21deg, rgba(4,9,30,0.7) 0%, rgba(4,9,30,0.7) 50%, rgba(4,9,30,0.7) 100%),
+    url("https://images.unsplash.com/photo-1536064479547-7ee40b74b807?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 60px;
+    color: #fff;
+  }
 /* main */
 .main{
     display: flex;
@@ -302,7 +302,25 @@ footer{
     height: 50%;
     width: auto;
   }
-
+/* BUTTON */
+.btn-update{
+    background-color: #034ea2;
+  }
+  .btn-delete,.logout:hover{
+    background-color: #FF2E2E;
+    color: #fff;
+  }
+  .btn-done{
+    color: black;
+  }
+.btn-update,.btn-delete,.btn-done{
+    padding: 5px;
+    border-radius: 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #fff;
+  }
 
 
 
