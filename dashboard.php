@@ -23,11 +23,11 @@
   <body class="main-dashboard">
     <?php include 'nav.php'; ?>
     <main>
-      <a href="booking.php"><button>Manage Appointments</button></a>
+      <a class="dashboard-link" href="booking.php"><button class="btn-update">Manage Appointments</button></a>
       
    
       <div class="main-text">
-      <div style="color: red;, font-size: 2rem;"><b><?php echo $output  ?></b></div>
+      <div class="error"><b><?php echo $output  ?></b></div>
         <h2 class="hero-main">Pending Registrations</h2>
       </div>
       <div class="table-container">
@@ -84,7 +84,6 @@
               <td>'.$bloodgroup.'</td>
               <td>'.$status.'</td>
               <td>
-              <a href="delete.php?deleteid='.$id.'&table=student" ><button class="btn-update">DELETE</button></a>
               <a href="done.php?doneid='.$id.'&table=student" ><button class="btn-update">UPDATE STATUS</button></a>
               </td>
             </tr>' ;   
