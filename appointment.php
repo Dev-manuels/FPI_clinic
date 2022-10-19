@@ -61,14 +61,14 @@
                 <h2 class="hero-text">Reservations</h2>
             </div>
             <div class="form-input-container">
-            <div style="color: red;, font-size: 2rem;"><b><?php echo $output  ?></b></div>
+            <div class="error"><b><?php echo $output  ?></b></div>
                 <div class="form-input">
                     <label for="name">Full Name</label>
-                    <input class="large" type="text" name="name" placeholder="Enter your Full name" minlength="5" required>
+                    <input type="text" name="name" placeholder="Enter your Full name" minlength="5" required>
                 </div>
                 <div class="form-input">
                         <label for="matric">Matric No:</label>
-                        <input type="text" name="matric" placeholder="Enter your Matric number" minlength="8" required>
+                        <input type="text" name="matric" placeholder="Enter your Matric number" minlength="4" required>
                 </div>
                <div class="form-input">
                         <label for="Department">Department:</label>
@@ -155,11 +155,11 @@
                 </div>
                 <div class="form-row">
                     <div class="form-input">
-                        <label for="Time">Time (8:30am to 3pm):</label>
+                        <label for="Time">Time (8:30am - 3pm):</label>
                         <input type="time" name="time" min="08:30" max="15:00" required>
                     </div>
                     <div class="form-input">
-                        <label for="date">Date</label>
+                        <label for="date">Date:</label>
                         <?php $now = date("Y-m-d");
                             $date=date_create($now);
                             date_add($date,date_interval_create_from_date_string("1 day"));
@@ -177,8 +177,6 @@
         
 
     </main>
-    
-    
     
     <?php include 'scripts.php'; ?>
 </body>
