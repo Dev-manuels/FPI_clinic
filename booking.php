@@ -23,7 +23,7 @@
   <body class="main-dashboard">
     <?php include 'nav.php'; ?>
     <main>
-      <a href="dashboard.php"><button>Back to Dashboard</button></a>
+      <a class="dashboard-link" href="dashboard.php"><button class="btn-update">Back to Dashboard</button></a>
       
    
       <div class="main-text">
@@ -75,8 +75,7 @@
               <td>'.$date.'</td>
               <td>'.$status.'</td>
               <td>
-              <a href="update.php?updateid='.$id.'&table=appointment" ><button>SHIFT</button></a>
-              <a href="done.php?doneid='.$id.'&table=appointment" ><button>APPROVE</button></a>
+                  <a href="approve.php?approveid='.$id.'&table=appointment" ><button class="btn-done">APPROVE</button></a>
               </td>
             </tr>' ;   
             }
@@ -88,7 +87,7 @@
 
 
       <div class="main-text">
-      <div style="color: red;, font-size: 2rem;"><b><?php echo $output  ?></b></div>
+      <div class="error"><b><?php echo $output  ?></b></div>
         <h2 class="hero-main">Approved appointments</h2>
       </div>
       <div class="table-container">
@@ -136,7 +135,7 @@
               <td>'.$date.'</td>
               <td>'.$status.'</td>
               <td>
-              <a href="delete.php?deleteid='.$id.'&table=appointment" ><button>DELETE</button></a>
+              <a href="delete.php?deleteid='.$id.'&table=appointment" ><button class="btn-delete">DELETE</button></a>
               </td>
             </tr>' ;   
             }
