@@ -72,7 +72,7 @@
                 <h2 class="hero-text">Student Registration</h2>
             </div>
             <div class="form-input-container">
-            <div style="color: red;, font-size: 2rem;"><b><?php echo $output  ?></b></div>
+            <div class="error"><b><?php echo $output  ?></b></div>
                 <div class="form-input">
                     <label for="name">Full Name</label>
                     <input class="large" type="text" name="name" placeholder="Enter your Full name" minlength="10" required>

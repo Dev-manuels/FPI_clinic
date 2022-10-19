@@ -50,7 +50,7 @@
     <body>
         <?php include 'nav.php'; ?>
 
-        <main class="main">
+        <main class="main login-main">
             <form method="post" class="form-container">
                 <div class="login-main-text">
                     <h2 class="hero-text-main">The Medical Centre</h2>

@@ -40,14 +40,14 @@
     <body>
         <?php include 'nav.php'; ?>
 
-        <main class="main">
+        <main class="main login-main">
             <form method="post" class="form-container">
                 <div class="login-main-text">
                     <h2 class="hero-text-main">The Medical Centre</h2>
                     <h2 class="hero-text">Login Portal</h2>
                 </div>
                 <div class="form-input-container">
-                <div style="color: red;, font-size: 2rem;"><b><?php echo $output  ?></b></div>
+                <div class="error"><b><?php echo $output  ?></b></div>
                     <div class="form-input">
                         <label for="Email">Email:</label>
                         <input class="large" type="email" name="email" placeholder="Enter your Email" required>
