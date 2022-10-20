@@ -51,7 +51,7 @@
 
         <!-- php code to read from database and display-->
         <?php 
-          $sql= "SELECT * from `appointment` WHERE status = 'pending' ORDER BY `appointment`.`date` ASC";
+          $sql= "SELECT * from `appointment` WHERE status = 'Pending' ORDER BY `appointment`.`date` ASC";
           $result = mysqli_query($con,$sql);
           
           if($result){
@@ -111,7 +111,7 @@
 
         <!-- php code to read from database and display-->
         <?php 
-          $sql= "SELECT * from `appointment` WHERE status = 'Registered' ORDER BY `appointment`.`date` ASC";
+          $sql= "SELECT * from `appointment` WHERE status = 'Approved' ORDER BY `appointment`.`date` ASC";
           $result = mysqli_query($con,$sql);
           
           if($result){

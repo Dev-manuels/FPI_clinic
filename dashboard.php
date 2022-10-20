@@ -84,7 +84,7 @@
               <td>'.$bloodgroup.'</td>
               <td>'.$status.'</td>
               <td>
-              <a href="done.php?doneid='.$id.'&table=student" ><button class="btn-update">UPDATE STATUS</button></a>
+              <a href="done.php?doneid='.$id.'" ><button class="btn-update">UPDATE STATUS</button></a>
               </td>
             </tr>' ;   
             }
@@ -153,7 +153,7 @@
               <td>'.$bloodgroup.'</td>
               <td>'.$status.'</td>
               <td>
-              <a href="update.php?updateid='.$id.'&table=student" ><button class="btn-update">UPDATE DETAILS</button></a>
+              <a href="update.php?updateid='.$id.'" ><button class="btn-update">UPDATE DETAILS</button></a>
               </td>
             </tr>' ;   
             }
