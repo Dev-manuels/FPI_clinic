@@ -1,26 +1,26 @@
 <?php
     include 'connection.php';
-
     session_start();
+    include 'access.php';
+
     
-    if($_SESSION['valid'] != true) {
-        $_SESSION['message'] = "Please login";
-        header("Location:login.php");
-    }else{
-        $_SESSION['message'] = "";
-    }
-    $_SESSION['message'];
-    $output;
+    
+    $output=$_SESSION['message'];
 
     if(isset($_POST['Register'])){
         $name=$_POST['name'];
         $email=$_POST['email'];
         $password=$_POST['password'];
+
+        $query = "SELECT * FROM admin WHERE email ='$email'";
+        $res = mysqli_query($con,$query);
     
     if(empty($email)){
       $output .= "Email address can not be Empty";
     } else if(empty($password)){
       $output .= "Enter valid Password";
+    } else if(mysqli_num_rows($res) >= 1){
+        $output .= "Email is already in use, use a diffrent Email";
     } else {
 
         $sql="insert into `admin` (name,email,password) values('$name','$email','$password')";
@@ -45,7 +45,7 @@
 <html lang="en">
     <head>
         <?php include 'links.php';?>
-        <title>Login</title>
+        <title>Register Admin</title>
     </head>
     <body>
         <?php include 'nav.php'; ?>
