@@ -15,7 +15,7 @@
     $status="Pending";
 
     
-    $query = " SELECT * FROM student WHERE matric = '$matric'";
+    $query = "SELECT * FROM student WHERE matric ='$matric'";
     $res = mysqli_query($con,$query);
 
 
@@ -36,19 +36,18 @@
         $output .= "Please select Genotype";
     } else if(empty($bloodgroup)){
         $output .= "Please select Blood group";
-    } else if(mysqli_num_rows($res) == 1){
+    } else if(mysqli_num_rows($res) >= 1){
         $output .= "Matric number has already been registred, Visit the clinic to update your details";
-    }
-     else {
-    $sql="insert into `student` (name,matric,dob,parent,role,phone,genotype,bloodgroup,status) 
-    values('$name','$matric','$dob','$parent','$role','$phone','$genotype','$bloodgroup','$status')";
-      $result=mysqli_query($con,$sql);
+    } else {
+        $sql="insert into `student` (name,matric,dob,parent,role,phone,genotype,bloodgroup,status) 
+        values('$name','$matric','$dob','$parent','$role','$phone','$genotype','$bloodgroup','$status')";
+        $result=mysqli_query($con,$sql);
 
-      if ($result) {
-        header('location:success.php');
-      } else {
-        die(mysqli_error($con));
-      }
+        if ($result) {
+            header('location:success.php');
+        } else {
+            die(mysqli_error($con));
+        }
     }
   }
 
@@ -75,12 +74,12 @@
             <div class="error"><b><?php echo $output  ?></b></div>
                 <div class="form-input">
                     <label for="name">Full Name</label>
-                    <input class="large" type="text" name="name" placeholder="Enter your Full name" minlength="10" required>
+                    <input class="large" type="text" name="name" placeholder="Enter your Full name" minlength="5" required>
                 </div>
                 <div class="form-row">
                     <div class="form-input">
                         <label for="matric">Matric No:</label>
-                        <input type="text" name="matric" placeholder="Enter your Matric number" minlength="8" required>
+                        <input type="text" name="matric" placeholder="Enter your Matric number" minlength="5" required>
                     </div>
                     <div class="form-input">
                         <label for="DOB">Date of Birth</label>
@@ -90,7 +89,7 @@
                 
                 <div class="form-input">
                     <label for="parent name">Parent name:</label>
-                    <input class="large" type="text" name="parent" placeholder="Enter your parent's fullname" minlength="10" required>
+                    <input class="large" type="text" name="parent" placeholder="Enter your parent's fullname" minlength="5" required>
                 </div>
 
                 <div class="form-row">
@@ -103,7 +102,7 @@
                     </div>
                     <div class="form-input">
                         <label for="parent number">Parent number:</label>
-                        <input type="tel" name="phone" placeholder="Parent's number" minlength="11" required>
+                        <input type="number" name="phone" placeholder="Parent's number" minlength="11" required>
                     </div>
                 </div>
                 <div class="form-row">

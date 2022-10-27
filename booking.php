@@ -1,6 +1,7 @@
 <?php
     include 'connection.php';
     session_start();
+    include 'access.php';
 
     $output=$_SESSION['message'];
     
@@ -36,7 +37,7 @@
         <tr>
           <!-- <th scope="col">#</th> -->
           <th scope="col">NAME</th>
-          <th scope="col">MATRIC NO</th>
+          <th scope="col">REGISTATION NO</th>
           <th scope="col">DEPARTMENT</th>
           <th scope="col">DATE</th>
           <th scope="col">TIME</th>
@@ -58,7 +59,7 @@
             while ($row=mysqli_fetch_assoc($result)) {
               $id=$row['id'];
               $name=$row['name'];
-              $matric=$row['matric'];
+              $regNo=$row['regNo'];
               $department=$row['department'];
               $time=$row['time'];
               $date=$row['date'];
@@ -69,7 +70,7 @@
               echo ' <tr>
               
               <td>'.$name.'</td>
-              <td>'.$matric.'</td>
+              <td>'.$regNo.'</td>
               <td>'.$department.'</td>
               <td>'.$time.'</td>
               <td>'.$date.'</td>
@@ -96,7 +97,7 @@
         <tr>
           <!-- <th scope="col">#</th> -->
           <th scope="col">NAME</th>
-          <th scope="col">MATRIC NO</th>
+          <th scope="col">REGISTATION NO</th>
           <th scope="col">DEPARTMENT</th>
           <th scope="col">DATE</th>
           <th scope="col">TIME</th>
@@ -118,7 +119,7 @@
             while ($row=mysqli_fetch_assoc($result)) {
               $id=$row['id'];
               $name=$row['name'];
-              $matric=$row['matric'];
+              $regNo=$row['regNo'];
               $department=$row['department'];
               $time=$row['time'];
               $date=$row['date'];
@@ -129,7 +130,7 @@
               echo ' <tr>
               
               <td>'.$name.'</td>
-              <td>'.$matric.'</td>
+              <td>'.$regNo.'</td>
               <td>'.$department.'</td>
               <td>'.$time.'</td>
               <td>'.$date.'</td>

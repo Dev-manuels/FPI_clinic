@@ -6,20 +6,20 @@
 
   if(isset($_POST['Reserve'])){
     $name=$_POST['name'];
-    $matric=$_POST['matric'];
+    $regNo=$_POST['regNo'];
     $department=$_POST['department'];
     $time=$_POST['time'];
     $date=$_POST['date'];
     $status="Pending";
 
     
-    $query = " SELECT * FROM appointment WHERE matric = '$matric'";
+    $query = " SELECT * FROM appointment WHERE regNo = '$regNo'";
     $res = mysqli_query($con,$query);
 
 
 
-    if(empty($matric)){
-      $output .= "Matric number can not empty";
+    if(empty($regNo)){
+      $output .= "Registration number can not empty";
     } else if(empty($name)){
       $output .= "Name can not empty";
     } else if(empty($department)){
@@ -28,12 +28,19 @@
       $output .= "Please pick a time";
     }  else if(empty($date)){
       $output .= "Please select a date";
-    } else if(mysqli_num_rows($res) == 1){
-        $output .= "You already have a scheduled appointment";
-    }
-     else {
-    $sql="INSERT INTO `appointment` (name,matric,department,date,time,status) 
-    VALUES('$name','$matric','$department','$date','$time','$status')";
+    } else if(mysqli_num_rows($res) >= 1){
+        $row=mysqli_fetch_assoc($res);
+        $id=$row['id'];
+        $sql="UPDATE `appointment` SET name='$name',department='$department',date='$date',time='$time',
+        status='$status' WHERE id=$id" ;
+        $update=mysqli_query($con,$sql);
+
+      if ($update) {
+            $output .= "You had a scheduled appointment!<br>It has been updated to new time and date";
+        } 
+    } else {
+    $sql="INSERT INTO `appointment` (name,regNo,department,date,time,status) 
+    VALUES('$name','$regNo','$department','$date','$time','$status')";
       $result=mysqli_query($con,$sql);
 
       if ($result) {
@@ -67,8 +74,8 @@
                     <input type="text" name="name" placeholder="Enter your Full name" minlength="5" required>
                 </div>
                 <div class="form-input">
-                        <label for="matric">Matric No:</label>
-                        <input type="text" name="matric" placeholder="Enter your Matric number" minlength="4" required>
+                        <label for="regNo">Registration No:</label>
+                        <input type="text" name="regNo" placeholder="Enter your Matric number" minlength="4" required>
                 </div>
                <div class="form-input">
                         <label for="Department">Department:</label>
@@ -168,10 +175,15 @@
                         ?>
                     </div>
                </div>
-               
-                <div class="form-submit">
-                    <input type="submit" value="Reserve" name="Reserve">
-                </div>
+                    <div class="form-submit">
+                        <input type="submit" value="Reserve" name="Reserve">
+                    </div>
+                <!-- <div class="form-row">
+                    
+                    <div class="form-submit">
+                    <input type="submit" value="Re-schedule" name="Reschedule">
+                    </div>
+                </div> -->
             </div>
         </form>
         
