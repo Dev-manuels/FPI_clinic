@@ -1,16 +1,11 @@
 <?php
     include 'connection.php';
     session_start();
+    include 'access.php';
 
     $output=$_SESSION['message'];
     
 
-    if ($_SESSION['valid'] != true) {
-        $_SESSION['message'] = "Please login";
-        header("Location:login.php");
-    }else{
-        $_SESSION['message'] = "";
-    }
 
 ?>
 
@@ -123,7 +118,7 @@
 
         <!-- php code to read from database and display-->
         <?php 
-          $sql= "SELECT * from `student` WHERE status = 'Registered' ORDER BY `student`.`date` ASC";
+          $sql= "SELECT * from `student` WHERE status = 'Registered' ORDER BY `student`.`matric` ASC";
           $result = mysqli_query($con,$sql);
           
           if($result){

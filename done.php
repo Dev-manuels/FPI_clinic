@@ -1,5 +1,6 @@
 <?php
   include 'connection.php';
+  include 'access.php';
 
   $id=$_GET['doneid'];
   $status="Registered";
