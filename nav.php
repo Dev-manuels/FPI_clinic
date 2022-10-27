@@ -21,6 +21,7 @@
                 <li><a href="login.php">Login</a></li>
                 <li><a href="register.php">Register</a></li>
                 <li><a href="appointment.php">Appointment</a></li>
+                <li><a href="checker.php">Check request status</a></li>
             </ul> 
         </nav>';
       }else{  

@@ -1,5 +1,6 @@
 <?php
   include 'connection.php';
+  include 'access.php';
 
 
   if (isset($_GET['deleteid'])&&!(isset($_GET['table']))) {
