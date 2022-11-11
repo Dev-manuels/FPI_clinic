@@ -1,25 +1,33 @@
 <?php
   include 'connection.php';
-  session_start();
+  if(!$_SESSION) { 
+    session_start();
+  } 
 
   $output=$_SESSION['message'];
   $_SESSION['message'] = "";
 
   if(isset($_POST['check'])){
     $regNo=$_POST['regNo'];
+    $regNo = trim($regNo);
     
     if(empty($regNo)){
       $output .= "Registration number can not be Empty";
     } else {
-      $query = " SELECT * FROM appointment WHERE regNo='$regNo' ";
+      $query = "SELECT * FROM appointment WHERE regNo='$regNo' ";
       $res = mysqli_query($con,$query);
       
       if(mysqli_num_rows($res) == 1){
         $row=mysqli_fetch_assoc($res);
+        $name=$row['name'];
         $time=$row['time'];
         $date=$row['date'];
         $status=$row['status'];
-        $output .= "$regNo reservation status is $status <br> Date = $date and time = $time";
+        if ($status == "Pending") {
+          $output .= "dear $name,<br>your reservation is $status <br> Date is $date and time is $time.";
+        } else {
+          $output .= "dear $name,<br>your reservation has been $status <br> Date is $date and time is $time.";
+        }
       } else {
         $output .= "$regNo has no found appointments";
       }
@@ -35,7 +43,7 @@
         <title>Checker</title>
     </head>
     <body>
-        <?php include 'nav.php'; ?>
+    <?php include 'nav.php';?>
 
         <main class="main login-main">
             <form method="post" class="form-container">
