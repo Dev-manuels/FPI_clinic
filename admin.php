@@ -1,7 +1,14 @@
 <?php
     include 'connection.php';
-    session_start();
-    include 'access.php';
+    if(!$_SESSION) { 
+        session_start();
+    } 
+    if ($_SESSION['valid'] != true) {
+        $_SESSION['message'] = "Please login!";
+        header("Location:login.php");
+    }else{
+        $_SESSION['message'] = "";
+    }
 
     
     
@@ -48,7 +55,7 @@
         <title>Register Admin</title>
     </head>
     <body>
-        <?php include 'nav.php'; ?>
+    <?php include 'nav.php';?>
 
         <main class="main login-main">
             <form method="post" class="form-container">
@@ -72,7 +79,7 @@
                         <input class="large" type="password" name="password" placeholder="Enter Password For Staff" required>
                     </div>
                     <div class="form-submit">
-                        <input type="submit" value="Login" name="Register">
+                        <input type="submit" value="Register" name="Register">
                     </div>
                 </div>
             </form>
