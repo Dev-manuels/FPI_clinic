@@ -1,7 +1,14 @@
 <?php
     include 'connection.php';
-    session_start();
-    include 'access.php';
+    if(!$_SESSION) { 
+      session_start();
+    } 
+    if ($_SESSION['valid'] != true) {
+      $_SESSION['message'] = "Please login!";
+      header("Location:login.php");
+    }else{
+      $_SESSION['message'] = "";
+    }
 
     $output=$_SESSION['message'];
     
@@ -22,7 +29,7 @@
     <title>Reservations</title>
   </head>
   <body class="main-dashboard">
-    <?php include 'nav.php'; ?>
+  <?php include 'nav.php';?>
     <main>
       <a class="dashboard-link" href="dashboard.php"><button class="btn-update">Back to Dashboard</button></a>
       
@@ -76,7 +83,8 @@
               <td>'.$date.'</td>
               <td>'.$status.'</td>
               <td>
-                  <a href="approve.php?approveid='.$id.'&table=appointment" ><button class="btn-done">APPROVE</button></a>
+                  <a href="shift.php?shiftid='.$id.'&table=appointment" ><button class="btn-update">Shift</button></a>
+                  <a href="approve.php?approveid='.$id.'&table=appointment" ><button class="btn-update">APPROVE</button></a>
               </td>
             </tr>' ;   
             }
@@ -109,7 +117,38 @@
 
 
 
-
+      <?php 
+          $sql= "SELECT * from `appointment` WHERE status = 'shifted' ORDER BY `appointment`.`date` ASC";
+          $result = mysqli_query($con,$sql);
+          
+          if($result){
+            while ($row=mysqli_fetch_assoc($result)) {
+              $id=$row['id'];
+              $name=$row['name'];
+              $regNo=$row['regNo'];
+              $department=$row['department'];
+              $time=$row['time'];
+              $date=$row['date'];
+              $status=$row['status'];
+              
+              
+              //<th scope="row">'.$id.'</th>
+              echo ' <tr>
+              
+              <td>'.$name.'</td>
+              <td>'.$regNo.'</td>
+              <td>'.$department.'</td>
+              <td>'.$time.'</td>
+              <td>'.$date.'</td>
+              <td>'.$status.'</td>
+              <td>
+              <a href="shift.php?shiftid='.$id.'&table=appointment" ><button class="btn-update">Shift</button></a>
+              <a href="delete.php?deleteid='.$id.'&table=appointment" ><button class="btn-delete">DELETE</button></a>
+              </td>
+            </tr>' ;   
+            }
+          }
+        ?>
         <!-- php code to read from database and display-->
         <?php 
           $sql= "SELECT * from `appointment` WHERE status = 'Approved' ORDER BY `appointment`.`date` ASC";
@@ -136,6 +175,7 @@
               <td>'.$date.'</td>
               <td>'.$status.'</td>
               <td>
+              <a href="shift.php?shiftid='.$id.'&table=appointment" ><button class="btn-update">Shift</button></a>
               <a href="delete.php?deleteid='.$id.'&table=appointment" ><button class="btn-delete">DELETE</button></a>
               </td>
             </tr>' ;   
