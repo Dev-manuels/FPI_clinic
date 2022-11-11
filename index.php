@@ -1,6 +1,11 @@
 <?php
     include 'connection.php';
-    session_start();
+    if(!$_SESSION) { 
+      session_start();
+      $_SESSION['valid'] = false;
+    } 
+     
+   
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +15,7 @@
     <?php include 'links.php';?>
   </head>
   <body>
-    <?php include 'nav.php';?>
+  <?php include 'nav.php';?>
 
     <main>
     <header id="header">
