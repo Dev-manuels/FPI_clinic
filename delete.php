@@ -1,6 +1,14 @@
 <?php
   include 'connection.php';
-  include 'access.php';
+  if(!$_SESSION) { 
+    session_start();
+  } 
+  if ($_SESSION['valid'] != true) {
+    $_SESSION['message'] = "Please login!";
+    header("Location:login.php");
+  }else{
+      $_SESSION['message'] = "";
+  }
 
 
   if (isset($_GET['deleteid'])&&!(isset($_GET['table']))) {

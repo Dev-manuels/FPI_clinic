@@ -1,6 +1,8 @@
 <?php
     include 'connection.php';
-    session_start();
+    if(!$_SESSION) { 
+      session_start();
+  } 
 
 ?>
 <!DOCTYPE html>
@@ -10,7 +12,7 @@
   <title>Successful</title>
 </head>
 <body>
-  <?php include 'nav.php';?>
+<?php include 'nav.php';?>
   <main>
     <div class="success-container">
     <img class="success-img" src="Images/Success.png">
