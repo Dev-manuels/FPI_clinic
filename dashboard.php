@@ -1,7 +1,14 @@
 <?php
     include 'connection.php';
-    session_start();
-    include 'access.php';
+    if(!$_SESSION) { 
+      session_start();
+    } 
+    if ($_SESSION['valid'] != true) {
+      $_SESSION['message'] = "Please login!";
+      header("Location:login.php");
+    }else{
+      $_SESSION['message'] = "";
+    }
 
     $output=$_SESSION['message'];
     
@@ -16,7 +23,7 @@
     <title>DASHBOARD</title>
   </head>
   <body class="main-dashboard">
-    <?php include 'nav.php'; ?>
+  <?php include 'nav.php';?>
     <main>
       <a class="dashboard-link" href="booking.php"><button class="btn-update">Manage Appointments</button></a>
       

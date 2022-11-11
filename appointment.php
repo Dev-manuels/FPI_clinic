@@ -1,7 +1,8 @@
-
 <?php
     include 'connection.php';
-    session_start();
+    if(!$_SESSION) { 
+        session_start();
+    } 
     $output="";
 
   if(isset($_POST['Reserve'])){
@@ -23,11 +24,11 @@
     } else if(empty($name)){
       $output .= "Name can not empty";
     } else if(empty($department)){
-      $output .= "Please select Date of Birth";
+      $output .= "Please select a Department";
     } else if(empty($time)){
       $output .= "Please pick a time";
     }  else if(empty($date)){
-      $output .= "Please select a date";
+      $output .= "Please pick a date";
     } else if(mysqli_num_rows($res) >= 1){
         $row=mysqli_fetch_assoc($res);
         $id=$row['id'];
@@ -60,7 +61,7 @@
     <title>Reservations</title>
 </head>
 <body>
-    <?php include 'nav.php';?>
+<?php include 'nav.php';?>
     <main class="main">
         <form method="post" class="form-container" >
             <div class="login-main-text">

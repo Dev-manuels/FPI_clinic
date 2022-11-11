@@ -1,6 +1,8 @@
 <?php
   include 'connection.php';
-  session_start();
+  if(!$_SESSION) { 
+    session_start();
+} 
 
   $output=$_SESSION['message'];
   $_SESSION['message'] = "";
@@ -19,7 +21,6 @@
 
       if(mysqli_num_rows($res) == 1){
         $_SESSION['valid'] = true;
-        $_SESSION['username'] = $email;
         header('location:dashboard.php');
       }else {
           $output .= "Enter valid user credentials";
@@ -38,7 +39,7 @@
         <title>Login</title>
     </head>
     <body>
-        <?php include 'nav.php'; ?>
+    <?php include 'nav.php';?>
 
         <main class="main login-main">
             <form method="post" class="form-container">

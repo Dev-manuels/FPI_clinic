@@ -1,6 +1,8 @@
 <?php
   include 'connection.php';
-
+  if(!$_SESSION) { 
+    session_start();
+    } 
   $output="";
 
   if(isset($_POST['register'])){
