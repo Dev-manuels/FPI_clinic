@@ -62,7 +62,7 @@
 </head>
 <body>
 <?php include 'nav.php';?>
-    <main class="main">
+    <main class="main register-main">
         <form method="post" class="form-container" >
             <div class="login-main-text">
                 <h2 class="hero-text-main">The Medical Centre</h2>

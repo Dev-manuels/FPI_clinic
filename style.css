@@ -370,10 +370,6 @@ font-size: 2rem;
         height: 88vh;
         padding-bottom: 0;
     }
-    .register-main{
-        height: fit-content;
-        padding-bottom: 60px;
-    }
     form{
         width: 80%;
     }
