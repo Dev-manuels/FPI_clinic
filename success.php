@@ -4,7 +4,7 @@
       session_start();
   }
   $stat=$_GET['stat'];
-  if ($stat = 1) {
+  if ($stat = "1") {
     $message = "";
   } else {
     $message = "<b>Note:</b> Visit the clinic with <br>your school fees recepit<br>and passport photograph

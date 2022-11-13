@@ -45,7 +45,7 @@
       $result=mysqli_query($con,$sql);
 
       if ($result) {
-        header('location:success?stat=1.php');
+        header('location:success.php?stat=1');
       } else {
         die(mysqli_error($con));
       }
