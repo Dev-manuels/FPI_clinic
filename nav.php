@@ -5,6 +5,7 @@ if(!$_SESSION) {
       if(isset($_POST['logout'])){
         unset($_SESSION['valid']);
         unset($_SESSION['username']);
+        unset($_SESSION['stat']);
         session_destroy();
         header('location:login.php');
       }

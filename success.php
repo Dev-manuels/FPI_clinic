@@ -3,15 +3,8 @@
     if(!$_SESSION) { 
       session_start();
   }
-  $stat=$_GET['stat'];
-  if ($stat = "1") {
-    $message = "";
-  } else {
-    $message = "<b>Note:</b> Visit the clinic with <br>your school fees recepit<br>and passport photograph
-    <br>to collect your clinic pass.";
-  }
-  
-
+  $stat = $_SESSION['stat'];
+  $_SESSION['stat']="";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +17,13 @@
   <main>
     <div class="success-container">
     <img class="success-img" src="Images/Success.png">
-    <p class="success-text"><?php echo $message;?></p>
+     <?php 
+      if ($stat == "no") {
+      } else {
+        echo '<p class="success-text"><b>Note:</b> Visit the clinic with <br>your school fees recepit<br>and passport photograph
+        <br>to collect your clinic pass.</p>';
+      }
+     ?>
     </div>
   </main>
 

@@ -45,7 +45,8 @@
       $result=mysqli_query($con,$sql);
 
       if ($result) {
-        header('location:success.php?stat=1');
+        $_SESSION['stat']= "no";
+        header('location:success.php');
       } else {
         die(mysqli_error($con));
       }
@@ -179,12 +180,6 @@
                     <div class="form-submit">
                         <input type="submit" value="Reserve" name="Reserve">
                     </div>
-                <!-- <div class="form-row">
-                    
-                    <div class="form-submit">
-                    <input type="submit" value="Re-schedule" name="Reschedule">
-                    </div>
-                </div> -->
             </div>
         </form>
         

@@ -164,6 +164,7 @@
         </tbody>
         </table>
       </div>
+      <div class="hack"></div>
     </main>
     
     <?php include 'scripts.php'; ?>
